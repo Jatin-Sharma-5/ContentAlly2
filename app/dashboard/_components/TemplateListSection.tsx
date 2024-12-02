@@ -34,7 +34,7 @@ function TemplateListSection({userSearchInput}:any) {
     },[userSearchInput])
 
     return (
-       <div className='relative'>
+       <div className='relative text-blue-400 '>
         <AnimatedGridPattern className="absolute inset-0 z-[0]" />
       
      
