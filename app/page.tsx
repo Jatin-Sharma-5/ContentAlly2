@@ -6,7 +6,8 @@ function page() {
   return (
     <div>
       <h2> Hi</h2>
-      <Button>Jatin</Button>
+      <Button>Jatin</Button> 
+      <br/>
       <Link href={'/dashboard'}>
       <Button>Dashboard</Button>
       </Link>
