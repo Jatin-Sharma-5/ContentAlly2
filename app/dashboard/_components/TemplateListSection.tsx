@@ -35,7 +35,7 @@ function TemplateListSection({userSearchInput}:any) {
 
     return (
         <div className="p-8">
-           
+           <AnimatedGridPattern/>
           
             {Templates && Templates.length > 0 ? (
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">

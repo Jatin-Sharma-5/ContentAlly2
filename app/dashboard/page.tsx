@@ -8,9 +8,7 @@ function Dashboard() {
   const [userSearchInput, setuserSearchInput]=useState<string>()
   return (
     <div className=' bg-gradient-to-r from-[#3ABEF9] via-[#3572EF] via-[#3ABEF9] to-[#A7E6FF] '>
-          
-
-
+        
      {/* Search Section */}
      <SearchSection onSearchInput={(value:string)=>setuserSearchInput(value)} />
 
