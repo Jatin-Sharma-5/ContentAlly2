@@ -37,7 +37,7 @@ function OutputSection() {
         useCommandShortcut={true}
         onChange={() =>
           console.log(editorRef.current?.getInstance().getMarkdown())
-        } // Logs editor content on change
+        }
       />
     </div>
   );

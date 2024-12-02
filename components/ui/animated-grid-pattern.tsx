@@ -20,7 +20,7 @@ interface AnimatedGridPatternProps {
 
 export default function AnimatedGridPattern({
   width = 40,
-  height = 20,
+  height = 40,
   x = -1,
   y = -1,
   strokeDasharray = 0,

@@ -34,9 +34,11 @@ function TemplateListSection({userSearchInput}:any) {
     },[userSearchInput])
 
     return (
-        <div className="p-8">
-           <AnimatedGridPattern/>
-          
+       <div className='relative'>
+        <AnimatedGridPattern className="absolute inset-0 z-[0]" />
+      
+     
+        <div className=" relative z-[10] p-8">
             {Templates && Templates.length > 0 ? (
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                     {templateList.map((item: TEMPLATE, index: number) => (
@@ -48,6 +50,7 @@ function TemplateListSection({userSearchInput}:any) {
             ) : (
                 <div className="text-center text-gray-500">No templates available.</div>
             )}
+        </div>
         </div>
     );
 }
