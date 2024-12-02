@@ -18,8 +18,8 @@ function TemplateCard(item: TEMPLATE) {
           height={50} 
           className="rounded-md"
         />
-        <h2 className='font-medium text-lg text-yellow-300'>{item.name || 'Untitled'}</h2>
-        <p className='text-slate-300 line-clamp-3'>{item.desc || 'No description available.'}</p>
+        <h2 className='font-medium text-lg text-black'>{item.name || 'Untitled'}</h2>
+        <p className='text-slate-800 line-clamp-3'>{item.desc || 'No description available.'}</p>
       </div>
     </Link>
   );
