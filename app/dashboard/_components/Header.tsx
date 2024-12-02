@@ -10,6 +10,7 @@ function Header() {
         className='outline-slate-400 rounded-2xl max-w-lg'/>
       </div>
       <div className='bg-primary text-sm text-white rounded-full p-2'>
+        <h2> --DEMO-- </h2>
         {/* <h2> Watch Adds in order get Tokens</h2> */}
       </div>
     </div>

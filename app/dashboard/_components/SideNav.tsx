@@ -1,5 +1,6 @@
 "use client";
 import { FileClock, Home, Settings, WalletCards } from "lucide-react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect } from "react";
 
@@ -37,7 +38,9 @@ function SideNav() {
     <div className="h-screen p-5 shadow-sm border">
       {/* Logo */}
       <div className="flex justify-center mb-8">
+        <Link href={"/"}>
         <img src="/logo1.jpg" alt="ContentAlly Logo" className="logo" width={120} height={200} />
+        </Link>
         {/* <h1 className="text-3xl">ContentAlly</h1> */}
       </div>
       <hr className="mt-4 border" />
