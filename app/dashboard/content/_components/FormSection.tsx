@@ -5,38 +5,29 @@ import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Loader2Icon } from "lucide-react";
 
 interface PROPS {
   selectedTemplate?: TEMPLATE;
-  userFormInput: (data: any) => void; // Expecting a function to handle input data in parent
+  userFormInput: (formData: any) => void;
+  loading: boolean;
 }
 
-function FormSection({ selectedTemplate, userFormInput }: PROPS) {
-  const [formData, setFormData] = useState<any>({}); // Initialize with an empty object
+function FormSection({ selectedTemplate, userFormInput, loading }: PROPS) {
+  const [formData, setFormData] = useState<any>({});
 
-  const handleInput = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInput = (event: any) => {
     const { name, value } = event.target;
-
-
-    setFormData((prevData: any) => {
-      const updatedData = { ...prevData, [name]: value }; // Update the state
-      return updatedData; // Return updated state
-    });
+    setFormData({ ...formData, [name]: value });
   };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = (e: any) => {
     e.preventDefault();
-    console.log("Form submitted with data:", formData); 
-    // userFormInput(formData); 
+    userFormInput(formData);
   };
-
-  if (!selectedTemplate) {
-    return <div className="p-5 text-center">No template selected</div>;
-  }
 
   return (
-    <div className="p-5 shadow-xl border rounded-lg bg-white ">
-      {/* Image Section */}
+    <div className="p-5 shadow-xl border rounded-lg bg-white">
       <Image
         src={selectedTemplate?.icon || "/fallback-icon.png"}
         alt="icon"
@@ -73,7 +64,8 @@ function FormSection({ selectedTemplate, userFormInput }: PROPS) {
             ) : null}
           </div>
         ))}
-        <Button type="submit" className="w-full py-6">
+        <Button type="submit" className="w-full py-6" disabled={loading}>
+          {loading && <Loader2Icon className="animate-spin mr-2" />}
           Generate Content
         </Button>
       </form>

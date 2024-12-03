@@ -64,7 +64,7 @@ export default  [
         category: 'Youtube Tools',
         icon: 'https://cdn-icons-png.flaticon.com/128/402/402075.png',
         slug: 'youtube-seo-title',
-        aiPrompt: 'Give me Best SEO optimized high ranked 5 title ideas bullet wise only bases on keywords and outline and give me result in HTML tags format',
+        aiPrompt: 'Give me Best SEO optimized high ranked 5 title ideas bullet wise only bases on keywords and outline and give me result in index numbering format',
         form: [
             {
                 label: 'Enter your youtube video topic keyowords',
@@ -228,24 +228,24 @@ export default  [
            
         ]
     },
-    {
-        name: 'English Grammer Check',
-        desc: 'AI Model to Correct your english grammer by providing the text',
-        icon:'https://cdn-icons-png.flaticon.com/128/12596/12596700.png',
-        category: 'english',
+    // {
+    //     name: 'English Grammer Check',
+    //     desc: 'AI Model to Correct your english grammer by providing the text',
+    //     icon:'https://cdn-icons-png.flaticon.com/128/12596/12596700.png',
+    //     category: 'english',
        
-        slug: 'english-grammer-checker',
-        aiPrompt: 'Rewrite the inputText by correcting the grammer and give output in  in rich text editor format',
-        form: [
-            {
-                label: 'Enter text to correct the grammer',
-                field: 'input',
-                name: 'inputText',
-                required:true
-            },
+    //     slug: 'english-grammer-checker',
+    //     aiPrompt: 'Rewrite the inputText by correcting the grammer and give output in  in rich text editor format',
+    //     form: [
+    //         {
+    //             label: 'Enter text to correct the grammer',
+    //             field: 'input',
+    //             name: 'inputText',
+    //             required:true
+    //         },
            
-        ]
-    },
+    //     ]
+    // },
     {
         name: 'Write Code',
         desc: 'AI Model to generate programming code in any language',
@@ -324,30 +324,30 @@ export default  [
            
         ]
     },
-    {
-        name: 'Product Description',
-        desc: 'This is your AI-powered SEO expert, creating captivating and keyword-rich e-commerce product descriptions to boost your online sales.',
-        icon:'https://cdn-icons-png.flaticon.com/128/679/679922.png',
-        category: 'Marketting',
+    // {
+    //     name: 'Product Description',
+    //     desc: 'This is your AI-powered SEO expert, creating captivating and keyword-rich e-commerce product descriptions to boost your online sales.',
+    //     icon:'https://cdn-icons-png.flaticon.com/128/679/679922.png',
+    //     category: 'Marketting',
        
-        slug: 'product-description',
-        aiPrompt: 'Depends on user productName and description generate small description for product for e-commer business give output  in rich text editor format  ',
-        form: [
-            {
-                label: 'Product Name',
-                field: 'input',
-                name: 'productName',
-                required:true
-            },
-            {
-                label: 'Product Details',
-                field: 'textarea',
-                name: 'outline',
-                required:true
-            },
+    //     slug: 'product-description',
+    //     aiPrompt: 'Depends on user productName and description generate small description for product for e-commer business give output  in rich text editor format  ',
+    //     form: [
+    //         {
+    //             label: 'Product Name',
+    //             field: 'input',
+    //             name: 'productName',
+    //             required:true
+    //         },
+    //         {
+    //             label: 'Product Details',
+    //             field: 'textarea',
+    //             name: 'outline',
+    //             required:true
+    //         },
            
-        ]
-    },
+    //     ]
+    // },
 
 
 
