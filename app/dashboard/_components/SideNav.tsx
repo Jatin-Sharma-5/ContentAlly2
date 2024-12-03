@@ -35,7 +35,7 @@ function SideNav() {
   }, [path]);
 
   return (
-    <div className="h-screen p-5 shadow-sm border">
+    <div className="h-screen p-5 shadow-sm border ">
       {/* Logo */}
       <div className="flex justify-center mb-8">
         <Link href={"/"}>
