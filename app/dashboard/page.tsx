@@ -7,7 +7,13 @@ import AnimatedGridPattern from '@/components/ui/animated-grid-pattern';
 function Dashboard() {
   const [userSearchInput, setuserSearchInput]=useState<string>()
   return (
-    <div className=' bg-sky-100  '>
+    <div   style={{
+      backgroundImage: `url('/img3.jpg')`,
+      backgroundSize:"cover",
+      backgroundPosition: 'center',
+      width: '100%',
+      height: '100%',
+    }}  >
         
      {/* Search Section */}
      <SearchSection onSearchInput={(value:string)=>setuserSearchInput(value)} />

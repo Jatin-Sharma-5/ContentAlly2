@@ -8,9 +8,10 @@ function TemplateCard(item: TEMPLATE) {
     <Link 
       href={"/dashboard/content/" + (item?.slug || '')} 
       aria-label={`View details for ${item?.name}`} >
-      <div className='p-5 rounded-md border bg-white/10 z-10 backdrop-filter backdrop-blur[15px] text-black 
-                      flex flex-col gap-3 cursor-pointer  border-black border-width:[2px]
-                      hover:shadow-2xl duration-300 hover:scale-110 transition-all hover:shadow-teal-300'>
+      <div className='p-5 rounded-md border bg-white/10 z-10 backdrop-filter backdrop-blur-sm text-black 
+                      flex flex-col gap-3 cursor-pointer  border-black border-width:[1px]
+                      hover:shadow-2xl duration-200 hover:scale-110 transition-all hover:shadow-teal-300 
+                      hover:backdrop-blur-none hover:bg-sky-100'>
         <Image 
           src={item.icon} 
           alt={`${item?.name || 'template'} icon`} 
