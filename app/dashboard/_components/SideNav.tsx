@@ -35,20 +35,26 @@ function SideNav() {
   }, [path]);
 
   return (
-    <div className="h-screen p-5 shadow-sm border ">
+    <div className="h-screen p-5 shadow-sm border">
       {/* Logo */}
       <div className="flex justify-center mb-8">
         <Link href={"/"}>
-        <img src="/logo1.jpg" alt="ContentAlly Logo" className="logo" width={120} height={200} />
+          <img
+            src="/logo1.jpg"
+            alt="ContentAlly Logo"
+            className="logo"
+            width={120}
+            height={200}
+          />
         </Link>
-        {/* <h1 className="text-3xl">ContentAlly</h1> */}
       </div>
       <hr className="mt-4 border" />
 
       <nav className="mt-4">
         {MenuList.map((menu, index) => (
-          <div
+          <Link
             key={index}
+            href={menu.path} // Wrap the whole div with Link to make it clickable
             className={`flex items-center gap-4 mb-4 p-2 rounded cursor-pointer hover:bg-primary group ${
               path === menu.path ? "bg-primary text-white" : ""
             }`}
@@ -66,7 +72,7 @@ function SideNav() {
             >
               {menu.name}
             </h2>
-          </div>
+          </Link>
         ))}
       </nav>
     </div>
