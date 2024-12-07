@@ -16,10 +16,11 @@ function Dashboard() {
     }}  >
         
      {/* Search Section */}
-     <SearchSection onSearchInput={(value:string)=>setuserSearchInput(value)} />
-
+     <div> 
+     <SearchSection onSearchInput={(value:string)=>setuserSearchInput(value)}  />
+      </div>
      {/* Template List Section */}
-     <div>
+     <div className='bg-white'>
       
      <TemplateListSection userSearchInput={userSearchInput}/>
      </div>

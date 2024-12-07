@@ -38,6 +38,7 @@ function OutputSection({aiOutput}:props) {
       </div>
 
       {/* Editor Section */}
+      
       <Editor
         ref={editorRef}
         initialValue="Output Will Display Here....." // Placeholder text

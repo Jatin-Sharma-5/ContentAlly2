@@ -51,7 +51,7 @@ function Page() {
   }, [user]);
 
   return (
-    <div className="gap-y-2 gap-x-2 bg-white mx-2 sm:mx-5 p-4 sm:p-6 border rounded-lg max-w-screen-lg mt-4">
+    <div className="gap-y-2 gap-x-2 bg-white mx-2 sm:mx-5 p-4 sm:p-6 border rounded-lg max-w-screen mt-4">
       <div className="mt-4 mb-6 text-center sm:text-left">
         <h1 className="text-2xl sm:text-3xl font-bold">History</h1>
         <h3 className="text-sm sm:text-lg text-gray-600 mt-2">

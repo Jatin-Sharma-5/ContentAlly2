@@ -40,7 +40,7 @@ function TemplateListSection({userSearchInput}:any) {
      
         <div className=" relative z-[10] p-8">
             {Templates && Templates.length > 0 ? (
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 ">
                     {templateList.map((item: TEMPLATE, index: number) => (
                         <TemplateCard key={index} {...item} />
                         

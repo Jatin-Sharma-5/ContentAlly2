@@ -36,7 +36,7 @@ function SideNav() {
 
   return (
     <div className="h-screen p-5 shadow-sm border">
-      {/* Logo */}
+    
       <div className="flex justify-center mb-8">
         <Link href={"/"}>
           <img
@@ -54,11 +54,11 @@ function SideNav() {
         {MenuList.map((menu, index) => (
           <Link
             key={index}
-            href={menu.path} // Wrap the whole div with Link to make it clickable
+            href={menu.path}
             className={`flex items-center gap-4 mb-4 p-2 rounded cursor-pointer hover:bg-primary group ${
               path === menu.path ? "bg-primary text-white" : ""
-            }`}
-          >
+            }`}>
+
             <menu.icon
               className={`group-hover:text-white transition-colors duration-200 ${
                 path === menu.path ? "text-white" : ""
