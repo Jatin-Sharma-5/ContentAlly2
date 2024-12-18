@@ -6,7 +6,7 @@ import { eq, desc } from 'drizzle-orm';
 import moment from 'moment';
 import React, { useEffect, useState } from 'react';
 
-interface HistoryItem {
+export interface History {
   templateSlug: string;
   id: number;
   formData: string;
@@ -17,7 +17,7 @@ interface HistoryItem {
 
 function Page() {
   const { user } = useUser();
-  const [history, setHistory] = useState<HistoryItem[]>([]);
+  const [history, setHistory] = useState<History[]>([]);
 
   // Fetching history from database
   const GetHistory = async () => {
@@ -37,7 +37,7 @@ function Page() {
         createdAt: item.createdAt ? new Date(item.createdAt).toISOString() : null,
       }));
 
-      setHistory(formattedResult as HistoryItem[]);
+      setHistory(formattedResult as History[]);
     } catch (error) {
       console.error('Error fetching history:', error);
     }

@@ -8,33 +8,38 @@ import React, { useEffect, useState } from 'react';
 
 function UsageTrack() {
   const { user } = useUser();
-  const [usageData, setUsageData] = useState<any[]>([]);
+  const [result, setResult] = useState<any[]>([]); // Declare result state to hold fetched data
 
+  // Fetch data only when the user is available
   useEffect(() => {
-    const fetchData = async () => {
-      if (user?.primaryEmailAddress?.emailAddress) {
-
-        const result = await db
-          .select()
-          .from(AiOutput)
-          .where(eq(AiOutput.createdBy, user.primaryEmailAddress.emailAddress)); 
-        setUsageData(result); 
-      } else {
-        setUsageData([]); // Fallback if emailAddress is undefined
-      }
-    };
-
-    fetchData(); // Run the fetch operation on component mount
+    if (user) {
+      GetData(); 
+    }
   }, [user]);
 
-  const GetTotalUsage = () => {
-    let total: number = 0;
-    usageData.forEach((element) => {
-      total = total + Number(element.aiResponse.length) 
-    });
-  
+  // Function to fetch the data from the database
+  const GetData = async () => {
+    try {
+      const resultData = await db
+        .select()
+        .from(AiOutput)
+        .where(eq(AiOutput.createdBy, user?.primaryEmailAddress?.emailAddress));
+
+      setResult(resultData); // Store the fetched data in the state
+      GetTotalUsage(resultData); // Pass the fetched data to GetTotalUsage function
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
-  console.log(result);
+
+  // Function to calculate total usage
+  const GetTotalUsage = (result: any[]) => {
+    let total: number = 0;
+    result.forEach((element) => {
+      total = total + (Number(element.aiResponse?.length) || 0); // Ensure aiResponse exists and has a length
+    });
+    console.log(total); // Log total usage
+  };
 
   return (
     <>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import UsageTrack from "./UsageTrack";
+import { UserButton } from "@clerk/nextjs";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,8 +12,8 @@ function Header() {
   const MenuList = [
     { name: "Home", icon: Home, path: "/dashboard" },
     { name: "History", icon: FileClock, path: "/dashboard/history" },
-    { name: "Billing", icon: WalletCards, path: "/dashboard/billing" },
-    { name: "Settings", icon: Settings, path: "/dashboard/setting" },
+    // { name: "Billing", icon: WalletCards, path: "/dashboard/billing" },
+    { name: "Settings", icon: Settings, path:"/dashboard/settings" },
   ];
 
   const path = usePathname();
@@ -66,9 +67,13 @@ function Header() {
       </nav>
 
       {/* Credits Section */}
-      <div>
+      {/* <div>
         <UsageTrack />
+      </div> */}
+      <div className="gap-4">
+      <UserButton/>
       </div>
+      
     </header>
   );
 }
