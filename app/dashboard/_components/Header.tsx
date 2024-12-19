@@ -3,7 +3,6 @@ import { FileClock, Home, Settings, WalletCards, Search, Menu } from "lucide-rea
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
-import UsageTrack from "./UsageTrack";
 import { UserButton } from "@clerk/nextjs";
 
 function Header() {
