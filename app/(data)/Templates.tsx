@@ -359,7 +359,7 @@ export default  [
         aiPrompt: 'Depends on Subject Name find important question for nursing MSN 2 for 4th year in BABA FARID UNIVERSITY and give output  in rich text editor format ',
         form: [
             {
-                label: 'Product/Brand Name',
+                label: 'Subject Name',
                 field: 'input',
                 name: 'productName',
                 required:true
