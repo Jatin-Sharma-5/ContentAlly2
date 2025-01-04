@@ -307,10 +307,10 @@ export default  [
         category: 'Marketting',
        
         slug: 'tagline-generator',
-        aiPrompt: 'Depends on user productName and outline generate catchy 5-10 tagline for the business product and give output  in rich text editor format ',
+        aiPrompt: 'Depends on Subject Name find important question for nursing MSN 2 for 4th sem in BABA FARID UNIVERSITY and give output  in rich text editor format ',
         form: [
             {
-                label: 'Product/Brand Name',
+                label: 'Subject Name',
                 field: 'input',
                 name: 'productName',
                 required:true
@@ -356,7 +356,7 @@ export default  [
         category: 'Imp Questions',
        
         slug: 'Question Genertor',
-        aiPrompt: 'Depends on Subject Name find important question for nursing MSN 2 for 4th year in BABA FARID UNIVERSITY and give output  in rich text editor format ',
+        aiPrompt: 'Depends on Subject Name find important question for nursing MSN 2 for 4th sem in BABA FARID UNIVERSITY and give output  in rich text editor format ',
         form: [
             {
                 label: 'Subject Name',
