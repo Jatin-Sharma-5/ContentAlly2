@@ -349,6 +349,29 @@ export default  [
     //     ]
     // },
 
-
+    {
+        name: 'IMPORTANT question Generator FOR NUrsing',
+        desc: 'Struggling to find the perfect tagline for your brand? Let our AI-tool assist you in creating a tagline that stands out.',
+        icon:'https://cdn-icons-png.flaticon.com/128/2178/2178616.png',
+        category: 'Imp Questions',
+       
+        slug: 'Question Genertor',
+        aiPrompt: 'Depends on Subject Name find important question for nursing MSN 2 for 4th year in BABA FARID UNIVERSITY and give output  in rich text editor format ',
+        form: [
+            {
+                label: 'Product/Brand Name',
+                field: 'input',
+                name: 'productName',
+                required:true
+            },
+            {
+                label: 'What you are selling / Marketting',
+                field: 'textarea',
+                name: 'outline',
+                required:true
+            },
+           
+        ]
+    },
 
 ]
