@@ -307,10 +307,10 @@ export default  [
         category: 'Marketting',
        
         slug: 'tagline-generator',
-        aiPrompt: 'Depends on Subject Name find important question for nursing MSN 2 for 4th sem in BABA FARID UNIVERSITY and give output  in rich text editor format ',
+        aiPrompt: 'Depends on user productName and outline generate catchy 5-10 tagline for the business product and give output  in rich text editor format ',
         form: [
             {
-                label: 'Subject Name',
+                label: 'Product/Brand Name',
                 field: 'input',
                 name: 'productName',
                 required:true
@@ -349,29 +349,6 @@ export default  [
     //     ]
     // },
 
-    {
-        name: 'IMPORTANT question Generator FOR NUrsing',
-        desc: 'Struggling to find the perfect tagline for your brand? Let our AI-tool assist you in creating a tagline that stands out.',
-        icon:'https://cdn-icons-png.flaticon.com/128/2178/2178616.png',
-        category: 'Imp Questions',
-       
-        slug: 'Question Genertor',
-        aiPrompt: 'Depends on Subject Name find important question for nursing MSN 2 for 4th sem in BABA FARID UNIVERSITY and give output  in rich text editor format ',
-        form: [
-            {
-                label: 'Subject Name',
-                field: 'input',
-                name: 'productName',
-                required:true
-            },
-            {
-                label: 'What you are selling / Marketting',
-                field: 'textarea',
-                name: 'outline',
-                required:true
-            },
-           
-        ]
-    },
+
 
 ]
